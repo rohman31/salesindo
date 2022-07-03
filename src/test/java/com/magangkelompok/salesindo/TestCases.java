@@ -8,17 +8,21 @@ public enum TestCases {
 	T2("Testing Login Valid Customer"),
 	T3("Testing Menu Input Data Pelamar"),
 	T4("Testing module biodata pelamar"),
-	T5("Testing Mandatory Field Data Pelamar"),
-	T6("Testing module Alamat Tinggal Pelamar Sesuai KTP"),
-	T7("Testing module Alamat Tinggal Pelamar Sekarang"),
-	T8("Testing form Informasi Saudara Tidak Serumah"),
-	T9("Testing form Informasi Keluarga Serumah"),
-	T10("Testing form Sosial Media"),
-	T11("Testing module Informasi Pendidikan"),
-	T12("Testing module Informasi Pengalaman Kerja"),
-	T13("Testing module Informasi Rekening"),
-	T14("Testing module Informasi Npwp"),
-	T15("Testing Menu Upload File Dokumen");
+//	T5("Testing Mandatory Field Data Pelamar"),
+	T5("Testing module Alamat Tinggal Pelamar Sesuai KTP"),
+	T6("Testing module Alamat Tinggal Pelamar Sekarang"),
+	T7("Testing form Informasi Saudara Tidak Serumah"),
+	T8("Testing form Informasi Keluarga Serumah"),
+	T9("Testing form Sosial Media"),
+	T10("Testing module Informasi Pendidikan"),
+	T11("Testing module Informasi Pengalaman Kerja"),
+	T12("Testing module Informasi Rekening"),
+	T13("Testing module Informasi Npwp"),
+	T14("Testing Menu Upload File Dokumen KTP"),
+	T15("Testing Menu Upload File Dokumen Ijazah"),
+	T16("Testing Menu Upload File Dokumen CV"),
+	T17("Testing Menu Upload File Dokumen KK"),
+	T18("Testing Menu Upload File Dokumen NPWP");
 	
 	
 	

@@ -94,10 +94,7 @@ public class StepDefinition {
 	public void customer_gagal_login() {
 		tunggu(3);
 		String actualString = loginPage.getMessageErrorLogin();
-//		CharSequence expectedString;
 		assertTrue(actualString.contains(configurationProperties.getMessageErrorLogin()));
-//		assertTrue(configurationProperties.getMessageErrorLogin(), false);
-//		assertEquals(configurationProperties.getMessageErrorLogin(), loginPage.getMessageErrorLogin());
 		extentTest.log(LogStatus.PASS, "Customer gagal login");
 	}
 	
@@ -113,7 +110,6 @@ public class StepDefinition {
 		tunggu(2);
 		String actualString = loginPage.getTxtWelcome();
 		assertTrue(actualString.contains(configurationProperties.getTxtWelcome()));
-//		assertEquals(configurationProperties.getTxtWelcome(), loginPage.getTxtWelcome());
 		extentTest.log(LogStatus.PASS, "Customer berhasil login");
 	}
 	
@@ -129,11 +125,9 @@ public class StepDefinition {
 	
 	@Then("Customer berhasil masuk ke form input pelamar")
 	public void customer_berhasil_masuk_ke_form_input_pelamar() {
-//		driver.navigate().refresh();
 		tunggu(2);
 		String actualString = dataPelamarPage.getTxtDataPelamar();
 		assertTrue(actualString.contains(configurationProperties.getTxtDataPelamar()));
-//		assertEquals(configurationProperties.getTxtWelcome(), loginPage.getTxtWelcome());
 		extentTest.log(LogStatus.PASS, "Customer berhasil masuk ke form input pelamar");
 	}
 	
@@ -148,27 +142,27 @@ public class StepDefinition {
 	
 	@Then ("Customer berhasil input biodata pelamar")
 	public void customer_berhasil_input_biodata_pelamar() {
-		driver.navigate().refresh();
+//		driver.navigate().refresh();
 		tunggu(2);
 		assertEquals(configurationProperties.getTxtBerhasilBiodata(), dataPelamarPage.getTxtBerhasilBiodata());
 		extentTest.log(LogStatus.PASS, "Customer berhasil input biodata pelamar");
 	}
 	
-	@When ("Customer isi mandatory field")
-	public void customer_isi_mandatory_field() {
-		tunggu(2);
-		dataPelamarPage.mandatoryBiodataPelamar(configurationProperties.getSelectIdent(), configurationProperties.getNoIdent(), configurationProperties.getNama(), configurationProperties.getEmail(), configurationProperties.getTanggal(),
-				configurationProperties.getBulan(), configurationProperties.getTahun(), configurationProperties.getKota(), configurationProperties.getIbu(), configurationProperties.getJk(),
-				configurationProperties.getAgama(), configurationProperties.getNikah(), configurationProperties.getTinggi(), configurationProperties.getBerat(),
-				configurationProperties.getHp());
-	}
-	
-	@Then ("Customer berhasil input hanya mandatory field di biodata pelamar")
-	public void customer_berhasil_input_hanya_mandatory_field_di_biodata_pelamar() {
-		tunggu(2);
-		assertEquals(configurationProperties.getTxtBerhasilBiodata(), dataPelamarPage.getTxtBerhasilBiodata());
-		extentTest.log(LogStatus.PASS, "Customer berhasil input hanya mandatory field di biodata pelamar");
-	}
+//	@When ("Customer isi mandatory field")
+//	public void customer_isi_mandatory_field() {
+//		tunggu(2);
+//		dataPelamarPage.mandatoryBiodataPelamar(configurationProperties.getSelectIdent(), configurationProperties.getNoIdent(), configurationProperties.getNama(), configurationProperties.getEmail(), configurationProperties.getTanggal(),
+//				configurationProperties.getBulan(), configurationProperties.getTahun(), configurationProperties.getKota(), configurationProperties.getIbu(), configurationProperties.getJk(),
+//				configurationProperties.getAgama(), configurationProperties.getNikah(), configurationProperties.getTinggi(), configurationProperties.getBerat(),
+//				configurationProperties.getHp());
+//	}
+//	
+//	@Then ("Customer berhasil input hanya mandatory field di biodata pelamar")
+//	public void customer_berhasil_input_hanya_mandatory_field_di_biodata_pelamar() {
+//		tunggu(2);
+//		assertEquals(configurationProperties.getTxtBerhasilBiodata(), dataPelamarPage.getTxtBerhasilBiodata());
+//		extentTest.log(LogStatus.PASS, "Customer berhasil input hanya mandatory field di biodata pelamar");
+//	}
 	
 	//Modul Alamat tinggal pelamar sesuai KTP
 	@When ("Customer input alamat tinggal pelamar sesuai KTP")
@@ -196,8 +190,6 @@ public class StepDefinition {
 	@Then ("Customer berhasil input form alamat tinggal sekarang")
 	public void customer_berhasil_input_form_alamat_tinggal_sekarang() {
 		tunggu(1);
-//		String actualString = dataPelamarPage.getTxtSuccessfulAlamatSekarang();
-//		assertTrue(actualString.contains(configurationProperties.getTxtSuccessfulAlamatSekarang()));
 		assertEquals(configurationProperties.getTxtSuccessfulAlamatSekarang(), dataPelamarPage.getTxtSuccessfulAlamatSekarang());
 		extentTest.log(LogStatus.PASS, "Customer berhasil input form alamat tinggal sekarang");
 	}
@@ -214,11 +206,9 @@ public class StepDefinition {
 	
 	@Then("Customer berhasil Mengisi Form Informasi Saudara Tidak Serumah")
 	public void customer_berhasil_mengisi_form_informasi_saudara_tidak_serumah() {
-//		driver.navigate().refresh();
 		tunggu(2);
 		String actualString = dataPelamarPage.getTxtInformasiKeluargaSerumah();
 		assertTrue(actualString.contains(configurationProperties.getTxtInformasiKeluargaSerumah()));
-//		assertEquals(configurationProperties.getTxtWelcome(), loginPage.getTxtWelcome());
 		extentTest.log(LogStatus.PASS, "Customer berhasil Mengisi Form Informasi Saudara Tidak Serumah");
 	}
 	
@@ -233,7 +223,6 @@ public class StepDefinition {
 	
 	@Then("Customer berhasil Mengisi Form Informasi Keluarga Serumah")
 	public void customer_berhasil_mengisi_form_informasi_keluarga_serumah() {
-//		driver.navigate().refresh();
 		tunggu(2);
 		String actualString = dataPelamarPage.getTxtSosialMedia();
 		assertTrue(actualString.contains(configurationProperties.getTxtSosialMedia()));
@@ -250,7 +239,6 @@ public class StepDefinition {
 	
 	@Then("Customer berhasil Mengisi Form Sosial Media")
 	public void customer_berhasil_mengisi_form_sosial_media() {
-//		driver.navigate().refresh();
 		tunggu(2);
 		String actualString = dataPelamarPage.getTxtInfolainnya();
 		assertTrue(actualString.contains(configurationProperties.getTxtInfolainnya()));
@@ -329,11 +317,68 @@ public class StepDefinition {
 	
 	@Then("Customer berhasil Upload File Dokumen Ktp")
 	public void customer_berhasil_upload_file_dokumen_ktp() {
-//		driver.navigate().refresh();
 		tunggu(2);
 		String actualString = uploadFilePage.getTxtKtp();
 		assertTrue(actualString.contains(configurationProperties.getTxtKtp()));
 		extentTest.log(LogStatus.PASS, "Customer berhasil Upload File Dokumen Ktp");
+	}
+	
+	@When("Customer Upload File Dokumen Ijazah")
+	public void customer_upload_file_dokumen_ijazah() {
+		uploadFilePage.uploadIjazah();
+		extentTest.log(LogStatus.PASS, "Customer Upload File Dokumen Ijazah");
+	}
+	
+	@Then("Customer berhasil Upload File Dokumen Ijazah")
+	public void customer_berhasil_upload_file_dokumen_ijazah() {
+		tunggu(1);
+		String actualString = uploadFilePage.getTxtIjazah();
+		assertTrue(actualString.contains(configurationProperties.getTxtIjazah()));
+		extentTest.log(LogStatus.PASS, "Customer berhasil Upload File Dokumen Ijazah");
+	}
+	
+	@When("Customer Upload File Dokumen Cv")
+	public void customer_upload_file_dokumen_cv() {
+		uploadFilePage.uploadCv();
+		extentTest.log(LogStatus.PASS, "Customer Upload File Dokumen Cv");
+	}
+	
+	@Then("Customer berhasil Upload File Dokumen Cv")
+	public void customer_berhasil_upload_file_dokumen_cv() {
+		tunggu(2);
+		String actualString = uploadFilePage.getTxtCv();
+		assertTrue(actualString.contains(configurationProperties.getTxtCv()));
+		extentTest.log(LogStatus.PASS, "Customer berhasil Upload File Dokumen Cv");
+	}
+	
+	@When("Customer Upload File Dokumen Kk")
+	public void customer_upload_file_dokumen_kk() {
+		uploadFilePage.uploadKk();
+		extentTest.log(LogStatus.PASS, "Customer Upload File Dokumen Kk");
+	}
+	
+	@Then("Customer berhasil Upload File Dokumen Kk")
+	public void customer_berhasil_upload_file_dokumen_kk() {
+//		driver.navigate().refresh();
+		tunggu(2);
+		String actualString = uploadFilePage.getTxtKk();
+		assertTrue(actualString.contains(configurationProperties.getTxtKk()));
+		extentTest.log(LogStatus.PASS, "Customer berhasil Upload File Dokumen Kk");
+	}
+	
+	@When("Customer Upload File Dokumen Npwp")
+	public void customer_upload_file_dokumen_npwp() {
+		uploadFilePage.uploadNpwp();
+		uploadFilePage.btnNextSubmit();
+		extentTest.log(LogStatus.PASS, "Customer Upload File Dokumen Npwp");
+	}
+	
+	@Then("Customer berhasil Upload File Dokumen Npwp")
+	public void customer_berhasil_upload_file_dokumen_npwp() {
+		tunggu(2);
+		String actualString = uploadFilePage.getTxtDataLengkap();
+		assertTrue(actualString.contains(configurationProperties.getTxtDataLengkap()));
+		extentTest.log(LogStatus.PASS, "Customer berhasil Upload File Dokumen Npwp");
 	}
 	
 	public static void tunggu(int detik) {

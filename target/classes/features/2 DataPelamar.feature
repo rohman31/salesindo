@@ -3,14 +3,10 @@ Feature: Customer Input Data Pelamar
 		When Customer klik button klik disini
 		Then Customer berhasil masuk ke form input pelamar
 		
-		Scenario: Testing module biodata pelamar
+	Scenario: Testing module biodata pelamar
 		When Customer input biodata pelamar
 		Then Customer berhasil input biodata pelamar
-	
-	Scenario: Testing mandatory field biodata pelamar
-		When Customer isi mandatory field
-		Then Customer berhasil input hanya mandatory field di biodata pelamar
-		
+			
 	Scenario: Testing module Alamat Tinggal Pelamar Sesuai KTP
 		When Customer input alamat tinggal pelamar sesuai KTP
 		Then Customer berhasil input form alamat tinggal pelamar sesuai KTP

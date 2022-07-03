@@ -131,8 +131,8 @@ public class ConfigurationProperties {
 	@Value("${txtKk}")
 	private String txtKk;
 	
-	@Value("${txtNpwp}")
-	private String txtNpwp;
+	@Value("${txtDataLengkap}")
+	private String txtDataLengkap;
 	
 
 	public String getTxtKtp() {
@@ -167,12 +167,12 @@ public class ConfigurationProperties {
 		this.txtKk = txtKk;
 	}
 
-	public String getTxtNpwp() {
-		return txtNpwp;
+	public String getTxtDataLengkap() {
+		return txtDataLengkap;
 	}
 
-	public void setTxtNpwp(String txtNpwp) {
-		this.txtNpwp = txtNpwp;
+	public void setTxtDataLengkap(String txtDataLengkap) {
+		this.txtDataLengkap = txtDataLengkap;
 	}
 
 	public String getFacebook() {

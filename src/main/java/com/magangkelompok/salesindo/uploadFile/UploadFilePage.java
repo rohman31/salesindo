@@ -105,6 +105,10 @@ public class UploadFilePage {
 		
 	}
 	
+	public void btnNextSubmit() {
+		btnNextSubmit.click();
+	}
+	
 	@FindBy(xpath = "//*[@id=\"fileupload\"]/div/table/tbody/tr[1]/td[2]")
 	private WebElement txtKtp;
 	
@@ -117,8 +121,8 @@ public class UploadFilePage {
 	@FindBy(xpath = "//*[@id=\"fileupload\"]/div/table/tbody/tr[4]/td[2]")
 	private WebElement txtKk;
 	
-	@FindBy(xpath = "//*[@id=\"fileupload\"]/div/table/tbody/tr[5]/td[2]")
-	private WebElement txtNpwp;
+	@FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div[1]")
+	private WebElement txtDataLengkap;
 	
 	
 	public String getTxtKtp() {
@@ -137,8 +141,8 @@ public class UploadFilePage {
 		return txtKk.getText();
 	}
 
-	public String getTxtNpwp() {
-		return txtNpwp.getText();
+	public String getTxtDataLengkap() {
+		return txtDataLengkap.getText();
 	}
 
 	
