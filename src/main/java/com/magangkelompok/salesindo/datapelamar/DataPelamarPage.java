@@ -447,7 +447,7 @@ public class DataPelamarPage {
 	@FindBy(id = "NPWP_Address")
 	private WebElement alamatNpwp;
 										
-	@FindBy(xpath="//*[@id=\"content\"]/form[2]/div/div[8]/div/div[7]/div")
+	@FindBy(xpath="//*[@id=\"fileupload\"]/div/div[1]")
 	private WebElement txtSuccesfullNpwp;
 
 

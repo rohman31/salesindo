@@ -182,14 +182,14 @@ public class StepDefinition {
 	//Modul Alamat tinggal sekarang
 	@When ("Customer input form alamat tinggal sekarang")
 	public void customer_input_form_alamat_tinggal_sekarang() {
-		tunggu(1);
+		tunggu(2);
 		dataPelamarPage.alamatTinggalSekarang(configurationProperties.getAlamatSekarang(), configurationProperties.getRtSekarang(), configurationProperties.getRwSekarang(), configurationProperties.getProvinsiAlamatSekarang(), configurationProperties.getKotaSekarang(), configurationProperties.getKecSekarang(), configurationProperties.getKelSekarang());
 		extentTest.log(LogStatus.PASS, "Customer input form alamat tinggal sekarang");
 	}
 	
 	@Then ("Customer berhasil input form alamat tinggal sekarang")
 	public void customer_berhasil_input_form_alamat_tinggal_sekarang() {
-		tunggu(1);
+		tunggu(2);
 		assertEquals(configurationProperties.getTxtSuccessfulAlamatSekarang(), dataPelamarPage.getTxtSuccessfulAlamatSekarang());
 		extentTest.log(LogStatus.PASS, "Customer berhasil input form alamat tinggal sekarang");
 	}
@@ -248,14 +248,14 @@ public class StepDefinition {
 	//Modul informasi pendidikan
 	@When ("Customer input form informasi pendidikan")
 	public void customer_input_form_informasi_pendidikan() {
-		tunggu(1);
+		tunggu(2);
 		dataPelamarPage.informasiPendidikan(configurationProperties.getEdu(), configurationProperties.getSchool(), configurationProperties.getMajor(), configurationProperties.getNilai());
 		extentTest.log(LogStatus.PASS, "Customer input form informasi pendidikan");
 	}
 	
 	@Then("Customer berhasil input form informasi pendidikan")
 	public void customer_berhasil_input_form_informasi_pendidikan() {
-		tunggu(1);
+		tunggu(2);
 		assertEquals(configurationProperties.getTxtSuccesfullPendidikan(), dataPelamarPage.getTxtSuccesfullPendidikan());
 		extentTest.log(LogStatus.PASS, "Customer berhasil input form informasi pendidikan");
 	}
@@ -264,14 +264,14 @@ public class StepDefinition {
 	//Modul informasi pengalaman kerja
 	@When ("Customer input form informasi pengalaman kerja")
 	public void customer_input_form_informasi_pengalaman_kerja() {
-		tunggu(1);
+		tunggu(2);
 		dataPelamarPage.informasiPengalamanKerja(configurationProperties.getCompany(), configurationProperties.getPosition(), configurationProperties.getLngYear(), configurationProperties.getLngMonth());
 		extentTest.log(LogStatus.PASS, "Customer input form informasi pengalaman kerja");
 	}
 		
 	@Then("Customer berhasil input form informasi pengalaman kerja")
 	public void customer_berhasil_input_form_informasi_pengalaman_kerja() {
-		tunggu(1);
+		tunggu(2);
 		String actualString = dataPelamarPage.getTxtSuccesfullPengalaman();
 		assertTrue(actualString.contains(configurationProperties.getTxtSuccesfullPengalaman()));
 		extentTest.log(LogStatus.PASS, "Customer berhasil input form informasi pengalaman kerja");
@@ -280,14 +280,14 @@ public class StepDefinition {
 	//Modul informasi rekening
 	@When ("Customer input form informasi rekening")
 	public void customer_input_form_informasi_rekening() {
-		tunggu(1);
+		tunggu(2);
 		dataPelamarPage.informasiRekening(configurationProperties.getNameBank(), configurationProperties.getNoRek(), configurationProperties.getNameBranch());
 		extentTest.log(LogStatus.PASS, "Customer input form informasi rekening");
 	}
 			
 	@Then("Customer berhasil input form informasi rekening")
 	public void customer_berhasil_input_form_informasi_rekening() {
-		tunggu(1);
+		tunggu(2);
 		assertEquals(configurationProperties.getTxtSuccesfullRekening(), dataPelamarPage.getTxtSuccesfullRekening());
 		extentTest.log(LogStatus.PASS, "Customer berhasil input form informasi rekening");
 	}
@@ -295,7 +295,7 @@ public class StepDefinition {
 	//Modul informasi npwp
 	@When ("Customer input form informasi npwp")
 	public void customer_input_form_informasi_npwp() {
-		tunggu(1);
+		tunggu(2);
 		dataPelamarPage.informasiNpwp(configurationProperties.getNumberNpwp(), configurationProperties.getAlmtNpwp());
 		dataPelamarPage.buttonNextStep();
 		extentTest.log(LogStatus.PASS, "Customer input form informasi npwp");
@@ -303,7 +303,7 @@ public class StepDefinition {
 			
 	@Then("Customer berhasil input form informasi npwp")
 	public void customer_berhasil_input_form_informasi_npwp() {
-		tunggu(1);
+		tunggu(2);
 		assertEquals(configurationProperties.getTxtSuccesfullNpwp(), dataPelamarPage.getTxtSuccesfullNpwp());
 		extentTest.log(LogStatus.PASS, "Customer berhasil input form informasi npwp");
 	}
@@ -331,7 +331,7 @@ public class StepDefinition {
 	
 	@Then("Customer berhasil Upload File Dokumen Ijazah")
 	public void customer_berhasil_upload_file_dokumen_ijazah() {
-		tunggu(1);
+		tunggu(2);
 		String actualString = uploadFilePage.getTxtIjazah();
 		assertTrue(actualString.contains(configurationProperties.getTxtIjazah()));
 		extentTest.log(LogStatus.PASS, "Customer berhasil Upload File Dokumen Ijazah");

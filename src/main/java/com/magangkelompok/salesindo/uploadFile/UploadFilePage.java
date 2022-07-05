@@ -121,7 +121,10 @@ public class UploadFilePage {
 	@FindBy(xpath = "//*[@id=\"fileupload\"]/div/table/tbody/tr[4]/td[2]")
 	private WebElement txtKk;
 	
-	@FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div[1]")
+//	@FindBy(xpath = "//*[@id=\"content\"]/div/div/div/div[1]")
+//	private WebElement txtDataLengkap;
+	
+	@FindBy(id ="content")
 	private WebElement txtDataLengkap;
 	
 	
